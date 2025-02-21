@@ -1,0 +1,329 @@
+/* Resetting some defaults */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation Bar Style */
+nav {
+    background: black;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+img {
+    width: 100%;
+    height: 600px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: 0.5s;
+}
+
+/* Hamburger Menu */
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* Content and About Section */
+.content img {
+    width: 200px;
+    margin-top: 40px;
+    position: relative;
+}
+
+#about {
+    margin: 0;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content .title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Brush Script MT,cursive;
+    text-shadow: 3px 3px 5px black;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    flex: 1;
+    margin-left: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.image img {
+    width: 70%;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.content p {
+    font-size: 40px;
+    line-height: 1.6;
+    margin-left: 0;
+    text-shadow: 3px 3px 5px black;
+    font-family: Brush Script MT,cursive;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 350px;
+}
+
+.card-container .images {
+    width: 370px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.images img {
+    border: 3px solid black;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,2);
+    transition: transform 0.3s ease;
+}
+
+.card-content h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Brush Script MT,cursive;
+    font-size: 40px;
+}
+
+.card-content p {
+    font-family: Brush Script MT,cursive;
+    line-height: 1.6;
+    font-size: 40px;
+}
+
+.images:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Smaller Screens */
+
+/* Tablets and above */
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image,
+    .content {
+        margin: 0;
+        height: auto;
+    }
+
+    .content.title {
+        font-size: 38px;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .about-content p {
+        font-size: 40px;
+        align-items: center;
+        line-height: 1.6;
+        margin-left: 20%;
+        font-family: Brush Script MT, cursive;
+    }
+}
+
+/* Mobile devices */
+/* Mobile devices */
+@media (max-width: 858px) {
+    /* Display Hamburger Button */
+    .checkbtn {
+        display: block;
+    }
+
+    /* Positioning of the navigation links (hidden initially on mobile) */
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        background: black;
+    }
+
+    /* Style for each navigation link item */
+    nav ul li {
+        display: block;  /* Stack items vertically */
+        margin: 50px 0;  /* Space between items */
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+        display: block;
+        padding: 15px;  /* Increase padding to make touch targets larger */
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+
+    /* Hover/active state for mobile nav links */
+    a:hover,
+    a:active {
+        background: none;
+        color: #0082e6;
+    }
+
+    /* When the checkbox is checked, show the menu */
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    /* Adjust the font size for the paragraph in the content */
+    .content p {
+        font-size: 40px;
+        line-height: 1.6;
+        margin-left: 0;
+        font-family: Brush Script MT, cursive;
+    }
+
+    .content img {
+        max-width: 40%;
+        margin-top: 40px;
+        position: relative;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content p {
+        font-size: 40px;
+        line-height: 1.6;
+        margin-left: 0;
+        font-family: Brush Script MT, cursive;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    /* Ensure content and images stack correctly */
+    .image,
+    .content {
+        margin: 0;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .content .title {
+        font-size: 38px;
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .about-content p {
+        margin-left: 0;
+    }
+
+    .image img {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .about-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+
