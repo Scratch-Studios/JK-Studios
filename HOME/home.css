@@ -49,6 +49,9 @@ nav ul li a {
     text-transform: uppercase;
     padding: 7px 13px;
     border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 a.active,
@@ -82,7 +85,6 @@ a:hover {
 #about {
     margin: 0;
 }
-
 .about-container {
     width: 100%;
     max-width: 100%;
@@ -92,6 +94,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .content .title {
@@ -123,10 +126,11 @@ a:hover {
 
 .image img {
     width: 70%;
+    height: 40%;
     transition: transform 0.3s ease;
 }
 
-.image:hover img {
+.image:hover img{
     transform: scale(1.1);
 }
 
@@ -138,11 +142,15 @@ a:hover {
     font-family: Brush Script MT,cursive;
 }
 
+#WHATDO{
+    margin: 0%;
+}
+
 .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 350px;
+    margin-top: 150px;
 }
 
 .card-container .images {
@@ -175,6 +183,78 @@ a:hover {
 .images:hover img {
     transform: scale(1.1);
 }
+ .head {
+    text-align: center;
+align-items: center;
+margin-top: 300px;
+font-family: Brush Script MT,cursive;
+font-size: 60px;
+ 
+
+}
+#HOWITWORK{
+    margin: 0%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.card-container .images {
+    width: 370px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.images h1{
+  
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,2);
+    transition: transform 0.3s ease;
+    border-radius: 180px;
+    width: 70px;
+    height: 70px;
+    justify-items: center;
+    padding: 20px;
+    font-size: 40px;
+    margin-top: -10px;
+    margin-left: 100px;
+    background-color: beige;
+}
+
+.card-content h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Brush Script MT,cursive;
+    font-size: 40px;
+}
+
+.card-content p {
+    font-family: Brush Script MT,cursive;
+    line-height: 1.6;
+    font-size: 40px;
+}
+
+.images:hover h1 {
+    transform: scale(1.1);
+}
+ .head {
+    text-align: center;
+align-items: center;
+margin-top: 300px;
+font-family: Brush Script MT,cursive;
+font-size: 60px;
+ 
+
+}
+
+
+
+
 
 /* Media Queries for Smaller Screens */
 
@@ -214,7 +294,16 @@ a:hover {
         margin-left: 20%;
         font-family: Brush Script MT, cursive;
     }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
 }
+
+
+    
 
 /* Mobile devices */
 /* Mobile devices */
@@ -273,15 +362,12 @@ a:hover {
     }
 
     .content img {
-        max-width: 40%;
+        max-width: 100%;
         margin-top: 40px;
         position: relative;
     }
 
-    .card {
-        width: 100%;
-    }
-
+   
     .about-content {
         flex-direction: column;
         text-align: center;
@@ -324,6 +410,211 @@ a:hover {
         margin-left: 0;
         justify-content: center;
     }
+  
+}
+#pacakge {
+    margin: 0;
+}
+ .about-contain {
+    width: 100%;
+    max-width: 100%;
+    padding: 50px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 200px;
+    background-color: beige;
+    height:500px;
+
 }
 
+.contect-box .title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Brush Script MT,cursive;
+    text-shadow: 3px 3px 5px black;
+}
 
+.about-contect {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.pack{
+    flex: 1;
+    margin-left: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contect-box {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.pack img {
+    width: 70%;
+    height: 70%;
+    transition: transform 0.3s ease;
+
+}
+
+.pack:hover img{
+    transform: scale(1.1);
+}
+
+.contect-box ul {
+    font-size: 40px;
+    line-height: 1.6;
+    margin-left: 0;
+    text-shadow: 3px 3px 5px black;
+    font-family: Brush Script MT,cursive;
+    justify-items: center;
+}
+.contect-box  a{
+
+    border: 3px solid black;
+    
+
+}
+/* Media Queries for Tablet Screens */
+@media (max-width: 952px) {
+    /* Adjust the layout of the Package section */
+    #Package {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .about-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .about-contect {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pack,
+    .contect-box {
+        width: 100%;
+        margin: 0 0 20px 0; /* Ensure some spacing between elements */
+    }
+
+    .pack img {
+        width: 100%; /* Make image responsive to fit within the container */
+        height: auto;
+    }
+
+    .contect-box ul {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Mobile-specific styles for the list items */
+    .contect-box ul li {
+        font-size: 30px; /* Adjust font size */
+        padding: 5px 0; /* Add some spacing between list items */
+    }
+
+    .contect-box a {
+        font-size: 22px;
+        padding: 10px 20px;
+        background:black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        justify-items: center;
+        
+
+    .contect-box a:hover {
+        background: black;
+    }
+
+    /* Reduce title size for better readability */
+    .contect-box .title {
+        font-size: 35px;
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 858px) {
+    /* Adjust the layout of the Package section */
+    #Package {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .about-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-contect {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pack,
+    .contect-box {
+        width: 100%;
+        margin: 0 0 20px 0; /* Ensure some spacing between elements */
+    }
+
+    .pack img {
+        width: 100%; /* Make image responsive to fit within the container */
+        height: 70%;
+    }
+
+    .contect-box ul {
+        font-size: 25px; /* Adjust font size for mobile screens */
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Mobile-specific styles for the list items */
+    .contect-box ul li {
+        font-size: 25px; /* Adjust font size */
+        padding: 5px 0; /* Add some spacing between list items */
+    }
+
+    .contect-box a {
+        font-size: 18px;
+        padding: 8px 15px;
+        background:black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-left: 70px;
+        justify-items: center;
+    }
+
+    .contect-box a:hover {
+        background: black;
+    }
+
+    /* Reduce title size for mobile screens */
+    .contect-box .title {
+        font-size: 30px;
+    }
+}
