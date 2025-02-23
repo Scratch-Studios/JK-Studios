@@ -542,13 +542,14 @@ font-size: 60px;
         
 
     .contect-box a:hover {
-        background: black;
+        background-color: black;
     }
 
     /* Reduce title size for better readability */
     .contect-box .title {
         font-size: 35px;
     }
+}
 }
 
 /* Media Queries for Mobile Devices */
