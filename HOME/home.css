@@ -298,6 +298,13 @@ font-size: 60px;
         flex-direction: column;
         text-align: center;
     }
+    .card-content p{
+    text-align: center;
+    margin-bottom: 80px;
+    }
+    .card-container{
+        justify-content: center;
+    }
 
     
 }
@@ -372,6 +379,9 @@ font-size: 60px;
         flex-direction: column;
         text-align: center;
     }
+    .card-container{
+        justify-content: center;
+    }
 
     .content p {
         font-size: 40px;
@@ -410,6 +420,9 @@ font-size: 60px;
         margin-left: 0;
         justify-content: center;
     }
+    .card-content{
+        text-align: center;
+        }
   
 }
 #pacakge {
@@ -426,7 +439,7 @@ font-size: 60px;
     justify-content: center;
     margin-top: 200px;
     background-color: beige;
-    height:500px;
+    height:600px;
 
 }
 
@@ -475,10 +488,21 @@ font-size: 60px;
     text-shadow: 3px 3px 5px black;
     font-family: Brush Script MT,cursive;
     justify-items: center;
+    margin-bottom: 60px;
 }
 .contect-box  a{
 
-    border: 3px solid black;
+    border: 3px solid white;
+    background-color: black;
+    margin-left: 150px;
+    padding: 15px;
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18PX;
+    box-shadow: 4px 4px 5px black;
+    border-radius: 13px;
+    
+
     
 
 }
@@ -513,7 +537,8 @@ font-size: 60px;
 
     .pack img {
         width: 100%; /* Make image responsive to fit within the container */
-        height: auto;
+        height: 30px;
+        margin-top: 150px;
     }
 
     .contect-box ul {
@@ -530,16 +555,17 @@ font-size: 60px;
     }
 
     .contect-box a {
-        font-size: 22px;
-        padding: 10px 20px;
-        background:black;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
+        padding: 15px;
+        color: azure;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18PX;
+        box-shadow: 4px 4px 5px black;
+        border-radius: 13px;
         display: inline-block;
-        margin-top: 20px;
-        justify-items: center;
-        
+        margin-top: 70px;
+        margin-left: 20px;
+    }
+    
 
     .contect-box a:hover {
         background-color: black;
@@ -550,7 +576,7 @@ font-size: 60px;
         font-size: 35px;
     }
 }
-}
+
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 858px) {
@@ -599,12 +625,14 @@ font-size: 60px;
     }
 
     .contect-box a {
-        font-size: 18px;
-        padding: 8px 15px;
-        background:black;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
+        padding: 15px;
+        color: azure;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18PX;
+        box-shadow: 4px 4px 5px black;
+        border-radius: 13px;
+        
+    
         display: inline-block;
         margin-left: 70px;
         justify-items: center;
