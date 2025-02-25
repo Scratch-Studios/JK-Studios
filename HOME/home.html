@@ -23,7 +23,29 @@
         </ul>
     </nav>
     <div class="sv-image">
-    <img src="home.jpeg">
+        <img src="home.jpeg" class="carousel-image">
+    <img src="image2.jpg" class="carousel-image" style="display:none;">
+    <img src="image3.jpg" class="carousel-image" style="display:none;">
+  <script>
+        window.onload = function() {
+            // Select all the images in the carousel
+            const images = document.querySelectorAll('.carousel-image');
+            let currentIndex = 0;
+
+            // Function to change images
+            function changeImage() {
+                // Hide current image
+                images[currentIndex].style.display = 'none';
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+                // Show the next image
+                images[currentIndex].style.display = 'block';
+            }
+
+            // Change image every 3 seconds
+            setInterval(changeImage, 6000);
+        };
+    </script>
     </div>
 </section>
 <section id="about">
@@ -101,8 +123,10 @@
       <li>.Product</li>
       <li>.Baby Shower</li>
       <li>.Birthday</li>
+     
     </ul>
     <a href="">PRICING PACKAGE</a>
+
         </div>
             </div>
          </div>  
