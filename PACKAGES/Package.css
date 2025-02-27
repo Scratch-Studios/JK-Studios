@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,62 +6,209 @@
 }
 
 body {
-   
-    background-image: no-repeat ;
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8f8f8;
 }
+
+/* Outer Wrapper */
 .outer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-}
-.outer img{
+    gap: 80px; /* Reduced gap */
     width: 100%;
-  
 }
 
-.outer h2 {
-    position: absolute;
-    top: 20vh;
-    color: white;
-    font-size: 36px;
-    font-family: 'Courier New', Courier, monospace;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.outer h1 {
-    position: absolute;
-    top: 30vh;
-    color: white;
-    font-size: 50px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.outer h3 {
-    position: absolute;
-    top: 40vh;
-    color: white;
-    font-size: 25px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.card-container {
-    display: flex;
-    gap: 50px;
-}
-
-.card {
-    width: 300px;
-    height: 400px;
-    background: white;
+/* Inner Section */
+.inner {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+}
+
+/* Fullscreen Background Image */
+.inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Text Overlay */
+.inner h2, .inner h1, .inner h3 {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Positioning for Text */
+.inner h2 { 
+    top: 40vh; 
+    font-size: 30px; 
+    left: 15%; }
+.inner h1 { 
+    top: 48vh; 
+    font-size: 70px; 
+    left: 10%; }
+.inner h3 { 
+    top: 62vh;
+     font-size: 20px; 
+     left: 15%; }
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Reduced gap */
+    width: 90%;
+    padding: 30px 10px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Service Packages Text */
+.card-container h2 {
+    width: 100%;
+    font-size: 35px;
     font-weight: bold;
+    margin-bottom: 20px; /* Reduced gap */
+    text-transform: uppercase;
+}
+
+/* Cards */
+
+.card:hover {
+    transform: scale(1.05);
+}
+/* Cards */
+.card1, .card2, .card3, .card4 {
+    width: 260px;
+    height: 360px;
+    background: grey;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+    padding: 20px; /* Add padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Ensure consistent styling for text */
+.card1 h3, .card2 h3, .card3 h3, .card4 h3 {
+    font-size: 25px;
+    margin-bottom: 30px; /* Space below heading */
+    color: black; /* Better contrast */
+    text-transform: uppercase;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.card1 p, .card2 p, .card3 p, .card4 p {
+    font-size: 16px;
+    line-height: 1.3;
+    color: black; /* Better contrast */
+}
+
+
+
+/* Responsive for inner and card-container */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .outer { gap: 50px; } /* Reduce space */
+
+    .inner h1 { 
+        font-size: 60px; 
+        top: 42vh;
+     }
+    .inner h2 { 
+        font-size: 25px; 
+        top: 34vh; 
+    }
+    .inner h3 {
+         font-size: 18px;
+          top: 55vh;
+         }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .outer { 
+        gap: 30px; 
+    } /* Reduce space further */
+    .inner {
+         height: 60vh;
+         }
+
+    .inner h1 { 
+        font-size: 45px; 
+        top: 28vh;
+         left: 8%;
+         }
+    .inner h2 {
+         font-size: 22px; 
+         top: 22vh;
+          left: 10%; 
+        }
+    .inner h3 { 
+        font-size: 16px;
+         top: 38vh;
+          left: 10%; 
+        }
+
+    .card-container {
+         flex-direction: column; 
+        }
+    .card-container h2 {
+         font-size: 28px;
+        }
+    .card {
+         width: 60%;
+          height: 350px; 
+        }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .outer {
+         gap: 20px;
+         } /* Minimal gap */
+    .inner { 
+        height: 50vh; 
+    }
+
+    .inner h1 {
+         font-size: 35px;
+          top: 25vh;
+           left: 5%;
+         }
+    .inner h2 { 
+        font-size: 18px;
+         top: 18vh; 
+         left: 7%; 
+        }
+    .inner h3 { 
+        font-size: 14px; 
+        top: 32vh;
+         left: 8%; 
+        }
+
+    .card-container h2 {
+         font-size: 22px; 
+        }
+    .card {
+         width: 90%;
+          height: 300px;
+         }
 }
