@@ -1,3 +1,4 @@
+
 /* Resetting some defaults */
 * {
     padding: 0;
@@ -33,7 +34,7 @@ nav ul {
 
 img {
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 nav ul li {
@@ -51,11 +52,13 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     justify-items: center;
+    border-radius: 40px;
+    font-family: Verdana, italic, sans-serif;
 }
 
 a.active,
 a:hover {
-    background: #1b9bff;
+    background:red;
     transition: 0.5s;
 }
 
@@ -100,8 +103,9 @@ a:hover {
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-    font-family: Brush Script MT,cursive;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 3px 3px 5px black;
+    margin-bottom: 20px;
 }
 
 .about-content {
@@ -115,7 +119,8 @@ a:hover {
     flex: 1;
     margin-left: 50px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
+
 }
 
 .content {
@@ -127,6 +132,7 @@ a:hover {
     width: 70%;
     height: 40%;
     transition: transform 0.3s ease;
+    
 }
 
 .image:hover img{
@@ -134,11 +140,12 @@ a:hover {
 }
 
 .content p {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.6;
     margin-left: 0;
-    text-shadow: 3px 3px 5px black; 
-     font-family: "Josefin Sans", serif;
+ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 #WHATDO{
@@ -151,6 +158,9 @@ a:hover {
     flex-wrap: wrap;
     margin-top: 150px;
 }
+#WHATDO .images img{
+    box-shadow: 10px 10px 10px 5px black;
+}
 
 .card-container .images {
     width: 370px;
@@ -162,21 +172,23 @@ a:hover {
 .images img {
     border: 3px solid black;
     padding: 5px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,2);
+    margin-bottom: 30px;
     transition: transform 0.3s ease;
+   
 }
 
 .card-content h2 {
     text-align: center;
     margin-top: 30px;
-    font-family: Brush Script MT,cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
 }
 
 .card-content p {
-    font-family: "Josefin Sans", serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
-    font-size: 40px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .images:hover img {
@@ -186,7 +198,7 @@ a:hover {
     text-align: center;
 align-items: center;
 margin-top: 300px;
-font-family: Brush Script MT,cursive;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 60px;
  
 
@@ -202,40 +214,44 @@ font-size: 60px;
     margin-top: 150px;
 }
 
-.card-container .images {
-    width: 370px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 30px;
+.card-container .images hq {
+ background-color: #ffd000;
 }
 
-.images h1{
-  
-    padding: 5px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,2);
-    transition: transform 0.3s ease;
-    border-radius: 180px;
-    width: 70px;
-    height: 70px;
-    justify-items: center;
-    padding: 20px;
-    font-size: 40px;
-    margin-top: -10px;
-    margin-left: 100px;
-    background-color: beige;
-}
+
 
 .card-content h2 {
     text-align: center;
     margin-top: 30px;
-    font-family: Brush Script MT,cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
+    margin-bottom: 20px;
+}
+#HOWITWORKES .images{
+    margin-top: 30px;
+    padding: 30px;
+    height: auto;
+}
+#HOWITWORKES .images img{
+   
+  
+    padding: 20px  30px;
+    align-items: center;
+    width: 150px;
+    margin-left: auto;
+  margin-right: auto;
+   display: block;
+    border-radius: 100%;
+    height: 150px;
+    background-color: black;
+    box-shadow: 5px 5px 4px black;
+    
 }
 
 .card-content p {
-    font-family: Brush Script MT,cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .images:hover h1 {
@@ -245,7 +261,7 @@ font-size: 60px;
     text-align: center;
 align-items: center;
 margin-top: 300px;
-font-family: Brush Script MT,cursive;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 60px;
  
 
@@ -290,9 +306,13 @@ font-size: 60px;
         font-size: 30px;
        text-align: center;
         line-height: 1.6;
-        font-family: "Josefin Sans", serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
        
     }
+a:hover {
+    background:red;
+    transition: 0.5s;
+}
     .about-content {
         flex-direction: column;
         text-align: center;
@@ -303,6 +323,10 @@ font-size: 60px;
     }
     .card-container{
         justify-content: center;
+    }
+    .images h1{
+        align-items: center;
+        margin-left: 300px;
     }
 
     
@@ -348,10 +372,9 @@ font-size: 60px;
     }
 
     /* Hover/active state for mobile nav links */
-    a:hover,
-    a:active {
-        background: none;
-        color: #0082e6;
+    a:hover {
+        background:red;
+        transition: 0.5s;
     }
 
     /* When the checkbox is checked, show the menu */
@@ -361,10 +384,11 @@ font-size: 60px;
 
     /* Adjust the font size for the paragraph in the content */
     .content p {
-        font-size: 40px;
+        font-size: 20px;
         line-height: 1.6;
         margin-left: 0;
-        font-family: "Josefin Sans", serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
     }
 
     .content img {
@@ -372,6 +396,7 @@ font-size: 60px;
         margin-top: 40px;
         position: relative;
     }
+
 
    
     .about-content {
@@ -383,10 +408,10 @@ font-size: 60px;
     }
 
     .content p {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1.6;
         margin-left: 0;
-        font-family: "Josefin Sans", serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         align-items: center;
         margin-bottom: 80px;
     }
@@ -408,6 +433,7 @@ font-size: 60px;
 
     .about-content p {
         margin-left: 0;
+        text-align: center;
     }
 
     .image img {
@@ -437,7 +463,7 @@ font-size: 60px;
     flex-direction: column;
     justify-content: center;
     margin-top: 200px;
-    background-color: beige;
+    background-color: #ffd000;
     height:600px;
 
 }
@@ -446,8 +472,10 @@ font-size: 60px;
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-    font-family: Brush Script MT,cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 3px 3px 5px black;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .about-contect {
@@ -473,7 +501,7 @@ font-size: 60px;
     width: 70%;
     height: 70%;
     transition: transform 0.3s ease;
-
+box-shadow: 10px 10px 10px 5px black;
 }
 
 .pack:hover img{
@@ -482,12 +510,13 @@ font-size: 60px;
 
 .contect-box ul {
     font-size: 40px;
-    line-height: 1.6;
+    line-height: 1.9;
     margin-left: 0;
     text-shadow: 3px 3px 5px black;
-    font-family: Brush Script MT,cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-items: center;
     margin-bottom: 60px;
+    color: white;
 }
 .contect-box  a{
 
@@ -694,7 +723,7 @@ html {
 }
 
 #about, #WHATDO, #Package {
-    animation: slideIn 1.5s ease-out;
+    animation: slideIn 3.5s ease-in-out;
 }
 .images h1 {
     padding: 5px;
@@ -763,7 +792,7 @@ html {
   
     width: 100%;
     height: 100%;
-    object-fit: cover;
+  
     transition: opacity 1s ease-in-out;
   }
   
