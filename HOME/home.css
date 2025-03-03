@@ -160,6 +160,7 @@ a:hover {
 }
 #WHATDO .images img{
     box-shadow: 10px 10px 10px 5px black;
+    height: 500px;
 }
 
 .card-container .images {
@@ -174,6 +175,7 @@ a:hover {
     padding: 5px;
     margin-bottom: 30px;
     transition: transform 0.3s ease;
+    object-fit: cover;
    
 }
 
@@ -360,6 +362,8 @@ a:hover {
         display: block;  /* Stack items vertically */
         margin: 50px 0;  /* Space between items */
         line-height: 30px;
+    }.head{
+        font-size: 28px;
     }
 
     nav ul li a {
@@ -384,7 +388,7 @@ a:hover {
 
     /* Adjust the font size for the paragraph in the content */
     .content p {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.6;
         margin-left: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -408,7 +412,7 @@ a:hover {
     }
 
     .content p {
-        font-size: 30px;
+        font-size: 16px;
         line-height: 1.6;
         margin-left: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -425,7 +429,7 @@ a:hover {
     }
 
     .content .title {
-        font-size: 38px;
+        font-size: 20px;
         margin-bottom: 30px;
         text-align: center;
         margin-left: 0;
@@ -447,6 +451,9 @@ a:hover {
     }
     .card-content{
         text-align: center;
+        }
+        .card-content p{
+            font-size: 24px;
         }
   
 }
@@ -586,7 +593,7 @@ a::after{
     }
 
     .contect-box ul {
-        font-size: 30px; /* Adjust font size for smaller screens */
+        font-size: 22px; /* Adjust font size for smaller screens */
         line-height: 1.6;
         text-align: center;
         margin-top: 20px;
@@ -594,7 +601,7 @@ a::after{
 
     /* Mobile-specific styles for the list items */
     .contect-box ul li {
-        font-size: 30px; /* Adjust font size */
+        font-size: 22px; /* Adjust font size */
         padding: 5px 0; /* Add some spacing between list items */
     }
 
@@ -662,7 +669,7 @@ a::after{
     }
 
     .contect-box ul {
-        font-size: 25px; /* Adjust font size for mobile screens */
+        font-size: 16px; /* Adjust font size for mobile screens */
         line-height: 1.6;
         text-align: center;
         margin-top: 10px;
@@ -670,7 +677,7 @@ a::after{
 
     /* Mobile-specific styles for the list items */
     .contect-box ul li {
-        font-size: 25px; /* Adjust font size */
+        font-size: 16px; /* Adjust font size */
         padding: 5px 0; /* Add some spacing between list items */
     }
 
