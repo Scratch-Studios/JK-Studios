@@ -11,12 +11,25 @@
 body {
     font-family: 'Courier New', Courier, monospace;
 }
+#home{
+    margin: auto;
+}
+.logo img{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    border-radius: 100%;
+    margin-top: 24px;
+    object-fit: cover;
+    padding:0px;
+ 
+}
 
 /* Navigation Bar Style */
 nav {
     background: black;
-    height: 80px;
-    width: 100%;
+    height: 100px;
+    width: 100%; 
 }
 
 label.logo {
@@ -30,6 +43,9 @@ label.logo {
 
 nav ul {
  text-align: center;
+ position: relative;
+ padding: 15px;
+
 }
 
 img {
@@ -55,11 +71,10 @@ nav ul li a {
     border-radius: 40px;
     font-family: Verdana, italic, sans-serif;
 }
-
-a.active,
 a:hover {
     background:red;
-    transition: 0.5s;
+    transition: 1.5s;
+    width: 300px;
 }
 
 /* Hamburger Menu */
@@ -140,10 +155,10 @@ a:hover {
 }
 
 .content p {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 1.6;
     margin-left: 0;
- 
+ margin-top: -40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -245,7 +260,7 @@ font-size: 60px;
    display: block;
     border-radius: 100%;
     height: 150px;
-    background-color: black;
+    background-color:whitesmoke;
     box-shadow: 5px 5px 4px black;
     
 }
@@ -284,6 +299,8 @@ font-size: 60px;
 
     nav ul li a {
         font-size: 16px;
+        margin-top: 100px;
+        width: 100%;
     }
 
     .about-content {
@@ -360,8 +377,9 @@ a:hover {
     /* Style for each navigation link item */
     nav ul li {
         display: block;  /* Stack items vertically */
-        margin: 50px 0;  /* Space between items */
+        margin: 50px 30px;  /* Space between items */
         line-height: 30px;
+        border-radius: 100%;
     }.head{
         font-size: 28px;
     }
@@ -373,13 +391,18 @@ a:hover {
         padding: 15px;  /* Increase padding to make touch targets larger */
         border-radius: 3px;
         text-transform: uppercase;
+        margin-top: -60px;
+        justify-content: center;
+        justify-items: center;
+        object-fit: cover;
+    }
+    .logo img{
+  
+       margin-left: -40px;
     }
 
     /* Hover/active state for mobile nav links */
-    a:hover {
-        background:red;
-        transition: 0.5s;
-    }
+   
 
     /* When the checkbox is checked, show the menu */
     #check:checked ~ ul {
