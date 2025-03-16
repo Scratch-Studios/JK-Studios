@@ -10,14 +10,7 @@ body {
     background-color: #f8f8f8;
 }
 
-.packages
- {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px; /* Reduced gap */
-    width: 100%;
-}
+
 
 /* Inner Section */
 .inner {
@@ -67,10 +60,7 @@ body {
 
 /* Tablets */
 @media (max-width: 1024px) {
-    .packages{
-         gap: 50px;
-         } /* Reduce space */
-
+   
     .inner h1 { 
         font-size: 60px; 
         top: 42vh;
@@ -87,10 +77,7 @@ body {
 
 /* Mobile Screens */
 @media (max-width: 768px) {
-    .packages
-     { 
-        gap: 30px; 
-    } /* Reduce space further */
+    
     .inner{
          height: 60vh;
          }
@@ -116,10 +103,7 @@ body {
 
 /* Small Phones */
 @media (max-width: 480px) {
-    .packages
-     {
-         gap: 20px;
-         } /* Minimal gap */
+   
     .inner{ 
         height: 50vh; 
     }
@@ -142,54 +126,63 @@ body {
 
 }
 
+
+/* Package Section */
 .package-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    margin-left: 170px;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
 }
+
 .package-card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 300px;
     cursor: pointer;
-    transition: transform 0.3s, max-height 0.5s ease-in-out;
+    transition: transform 0.5s, height 0.5s, padding 0.5s;
     overflow: hidden;
-    max-height: 120px;
+    position: relative;
+    height: 120px;
+    text-align: center;
 }
+
 .package-card:hover {
     transform: scale(1.05);
-    max-height: 1000px;
-    
+    height: 300px;
+    padding: 30px;
 }
+
 .pricing-cards {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
+
 .package-card:hover .pricing-cards {
     opacity: 1;
 }
+
 .pricing-card {
     background: white;
     padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    margin: 5px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    text-align: center;
 }
+
 .price {
-    font-size: 16px;
+    font-size: 18px;
     color: #e67e22;
     font-weight: bold;
 }
+
 
  /* Feedback Section */
  .feedback {
@@ -279,3 +272,5 @@ body {
         font-size: 16px;
     }
 }
+
+ 
