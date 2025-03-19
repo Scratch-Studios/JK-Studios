@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+        <div class="logo">
+       <img src="logo1.jpg"></a>
+        </div>
+    <nav>
+       
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Package.html">Package</a></li>
+            <li><a href="contact .html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+    <div class="sv-image">
+        <img src="home.jpeg" class="carousel-image">
+    <img src="coverimg.jpg" class="carousel-image" style="display:none;">
+    <img src="image2.jpg" class="carousel-image" style="display:none;">
+  <script>
+        window.onload = function() {
+            // Select all the images in the carousel
+            const images = document.querySelectorAll('.carousel-image');
+            let currentIndex = 0;
+
+            // Function to change images
+            function changeImage() {
+                // Hide current image
+                images[currentIndex].style.display = 'none';
+                // Move to next image
+                currentIndex = (currentIndex + 1) % images.length;
+                // Show the next image
+                images[currentIndex].style.display = 'block';
+            }
+
+            // Change image every 3 seconds
+            setInterval(changeImage, 6000);
+        };
+    </script>
+    </div>
+</section>
+<section id="about">
+    <div class="about-container">
+    
+    <div class="about-content">
+        <div class="image">
+            <img src="ab.avif">
+            </div>
+         
+            <div class="content">
+               
+    <p>
+                
+        Life can be crazy, shy, silly, glowing, sensual, teasing, 
+        flirting  quiet or playful and we are passionate about
+        documenting spontaneous mood in an editorially style while
+        carefully creatin gauthentic images that matter. We want to
+        take pictures of you the way you are.
+         
+        </p>
+        </div>
+            </div>
+         </div>  
+</section>
+<section  id="WHATDO">
+    <h1 class="head">WHAT WE DO</h1>
+    <div class="card-container">
+    <div class="images">
+        <img  src="img1.avif">
+        <div class="card-content">
+            <h2>ENGAGEMENT</h2>
+            <p>When you realize you want to spend the rest of your life with 
+               somebodyyou want the rest of your life to start as soon as possible.</p>
+        </div>
+       
+    </div>
+    <div class="images">
+        <img  src="img2.avif">
+        <div class="card-content">
+            <h2>WEDDING  </h2>
+            <p>Love seems the swiftest but it is the slowest of all growths
+               love is until they have been married a quarter of a century..</p>
+        </div>
+       
+    </div>
+    <div class="images">
+        <img  src="img3.avif">
+        <div class="card-content">
+            <h2>LIFESTYLE
+            </h2>
+            <p>  Your time is limited, so don’t waste it living someone else’s life be 
+               trapped by dogma – which is living with the results of other people’s thinking..</p>
+        </div>
+       
+    </div>
+</div>
+
+</section>
+<section id="Package">
+    <div class="about-contain">
+    
+    <div class="about-contect">
+        <div class="pack">
+            <img src="pack.jpg">
+            </div>
+         
+            <div class="contect-box">
+                <h1 class="title">The Full Wedding</h1>
+                <h1 class="title">Experience  </h1>
+    <ul>
+                
+      <li>.Wedding</li>
+      <li>.Lifestyle</li>
+      <li>.Product</li>
+      <li>.Baby Shower</li>
+      <li>.Birthday</li>
+     
+    </ul>
+   
+
+        </div>
+            </div>
+         </div>  
+</section>
+
+<section  id="HOWITWORKES">
+    <h1 class="head">HOW IT WORK</h1>
+    <div class="card-container">
+    <div class="images">
+        <img src="logo1.jpg">
+        <div class="card-content">
+            <h2> Collaborative & No Jerks</h2>
+            <p>When you realize you want to spend the rest of your life with 
+               somebodyyou want the rest of your life to start as soon as possible.</p>
+        </div>
+       
+    </div>
+    <div class="images">
+        <img src="logo1.jpg">
+        <div class="card-content">
+            <h2>Excellence & Do the right 
+                      thing  </h2>
+            <p>Love seems the swiftest but it is the slowest of all growths
+               love is until they have been married a quarter of a century..</p>
+        </div>
+       
+    </div>
+    <div class="images">
+        <img src="logo1.jpg">
+        <div class="card-content">
+            <h2>
+                Flexible & No Stress
+                      Monkeys
+            </h2>
+            <p>Your time is limited, so don’t waste it living someone else’s life be 
+              trapped by dogma – which is living with the results of other people’s thinking..</p>
+        </div>
+       
+    </div>
+</div>
+
+</section>
+</body>
+</html>
