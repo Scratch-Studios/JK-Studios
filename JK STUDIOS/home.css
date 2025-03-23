@@ -12,75 +12,85 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.logo img{
-    width: 200px;
-    height: 60px;
-    position: absolute;
-    border-radius: 100%;
-    margin-top: 24px;
-    object-fit: cover;
-    
- 
-}
 
-/* Navigation Bar Style */
 nav {
-    background: black;
-    height: 100px;
-    width: 100%; 
-  
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px 1px grey;
+    height: 80px;
+    width: fit-content;
+    padding: 10px 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 40px;
 }
-
 
 nav ul {
- text-align: center;
- position: relative;
- padding: 15px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
 }
 
-
 nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li a {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    padding: 7px 13px;
-  
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    border-radius: 40px;
-    font-family: Verdana, italic, sans-serif;
-}
-a:hover {
-    background:gold;
+    text-decoration: none;
     color: black;
-    transition: 1s;
-    width: 300px;
+    font-size: 25px;
+    font-weight:600;
+    text-transform: capitalize;
+    padding: 30px;
 }
 
-/* Hamburger Menu */
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px 1px grey;
+   }
+
+.logo img {
+    width: 100px;
+    height: auto;
+   
 }
 
-#check {
-    display: none;
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
-
+/* home */
+#home{
+    top: 100px;
+}
 .sv-image {
 
     object-fit: cover;

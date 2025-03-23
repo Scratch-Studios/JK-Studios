@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Logo Navbar</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About</a></li>
+      
+        <div class="logo">
+            <img src="jk.png" alt="logo">
+            
+            
+        </div>
+       
+            <li><a href="#Package">Package</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <script>
+           document.addEventListener("DOMContentLoaded", function () {
+    const logoContainer = document.querySelector(".logo img");
+    const images = ["jk.png", "camera.png"];
+    let index = 0;
+
+    function animateBubbleEffect() {
+        logoContainer.style.transition = "opacity 0.5s ease, transform 0.5s ease-out";
+        logoContainer.style.opacity = 0;
+        logoContainer.style.transform = "scale(0.5) translateY(-10px)";
+        
+        setTimeout(() => {
+            index = (index + 1) % images.length;
+            logoContainer.src = images[index];
+            
+            logoContainer.style.opacity = 1;
+            logoContainer.style.transform = "scale(1) translateY(0)";
+        }, 500);
+    }
+
+    setInterval(animateBubbleEffect, 1500);
+});
+
+        </script>
+    </nav>
+    
+</body>
+</html>
