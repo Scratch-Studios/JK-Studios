@@ -3,8 +3,6 @@
 * {
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -13,67 +11,81 @@ body {
 }
 
 
+/* Full header with glass effect */ 
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        backdrop-filter: blur(10px); /* Glass effect */
+        z-index: 1000; /* Keeps it on top */
+    }
+    
+
+/* Navbar inside header */
 nav {
     position: fixed;
-    top: 50px;
+    top: 35px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 30px;
-    box-shadow: 2px 2px 5px 1px grey;
-    height: 80px;
     width: fit-content;
-    padding: 10px 20px;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    height: 70px; /* Adjust as needed */
+    background: rgb(255, 255, 255,0.5); /* Light transparent white */
+    backdrop-filter: blur(15px); /* Glass effect */
+    box-shadow: 2px 2px 5px 1px grey;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    z-index: 1000;
+    border-radius: 50px;
     padding: 10px 40px;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
     list-style: none;
+    padding: 0;
     gap: 30px;
-}
-
-nav ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 25px;
-    font-weight:600;
-    text-transform: capitalize;
-    padding: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: 0.3s;
 }
 
+/* Navbar hover effect */
+nav ul li a:hover {
+    color: red;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+/* Logo in center */
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255);
     backdrop-filter: blur(10px);
-    box-shadow: 2px 2px 5px 1px grey;
-   }
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    box-shadow: 2px 2px 5px grey;
+}
 
 .logo img {
-    width: 100px;
+    width: 70px;
     height: auto;
-   
 }
+
+
 
 @media (max-width: 768px) {
     nav {
@@ -87,26 +99,31 @@ nav ul li a {
     }
 }
 
-/* home */
-#home{
-    top: 100px;
+
+section{
+    margin-top: 180px;
 }
+/* home */
 .sv-image {
-
-    object-fit: cover;
-    width: 100%;
-    height: 600px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 90%;
+    border-radius: 10px;
     overflow: hidden; /* Hide images that are not visible */
-  }
-  
-  .carousel-image {
-  
-    width: 100%;
-    height: 100%;
-  
-    transition: opacity 1s ease-in-out;
-  }
+    margin: auto; /* Centers the container */
+}
 
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: none; /* Hide all images initially */
+}
+
+/* Show the first image by default */
+.carousel-image:first-child {
+    display: block;
+}
 
 /*   About Section */
 
@@ -125,14 +142,6 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     margin-top: 100px;
-}
-
-.content .title {
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    text-shadow: 3px 3px 5px black;
-    margin-bottom: 20px;
 }
 
 .about-content {
@@ -163,13 +172,25 @@ nav ul li a {
    
 }
 
+
+
 /* section whatdo */
+
+.head {
+    text-align: center;
+align-items: center;
+margin-top: 100px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 30px;
+ 
+
+}
 
 .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 150px;
+    margin-top: 10px;
 }
 #WHATDO .images img{
     box-shadow: 10px 10px 10px 5px black;
@@ -209,15 +230,11 @@ nav ul li a {
 .images:hover img {
     transform: scale(1.1);
 }
- .head {
-    text-align: center;
-align-items: center;
-margin-top: 300px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 50px;
- 
 
-}
+
+
+/* How it works */
+
 #HOWITWORK{
     margin: 0%;
 }
@@ -286,199 +303,5 @@ font-size: 60px;
 
 
 
-/* Media Queries for Smaller Screens */
-
-/* Tablets and above */
-@media (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
-        padding-left: 50px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-        margin-top: 100px;
-        width: 100%;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image,
-    .content {
-        margin: 0;
-        height: auto;
-    }
-
-    .content.title {
-        font-size: 38px;
-        margin-bottom: 30px;
-        text-align: center;
-        margin-top: 0;
-    }
-
-    .about-content p {
-        font-size: 30px;
-       text-align: center;
-        line-height: 1.6;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-       
-    }
-a:hover {
-    background:red;
-    transition: 0.5s;
-}
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .card-content p{
-    text-align: center;
-    margin-bottom: 80px;
-    }
-    .card-container{
-        justify-content: center;
-    }
-    .images h1{
-        align-items: center;
-        margin-left: 300px;
-    }
 
     
-}
-
-
-    
-
-/* Mobile devices */
-/* Mobile devices */
-@media (max-width: 858px) {
-    /* Display Hamburger Button */
-    .checkbtn {
-        display: block;
-    }
-
-    /* Positioning of the navigation links (hidden initially on mobile) */
-    ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all 0.5s;
-        background: black;
-    }
-
-    /* Style for each navigation link item */
-    nav ul li {
-        display: block;  /* Stack items vertically */
-        margin: 50px 30px;  /* Space between items */
-        line-height: 30px;
-        border-radius: 100%;
-    }.head{
-        font-size: 28px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-        color: white;
-        display: block;
-        padding: 15px;  /* Increase padding to make touch targets larger */
-        border-radius: 3px;
-        text-transform: uppercase;
-        margin-top: -60px;
-        justify-content: center;
-        justify-items: center;
-        object-fit: cover;
-    }
-    .logo img{
-  
-       margin-left: -40px;
-    }
-
-    /* Hover/active state for mobile nav links */
-   
-
-    /* When the checkbox is checked, show the menu */
-    #check:checked ~ ul {
-        left: 0;
-    }
-
-    /* Adjust the font size for the paragraph in the content */
-    .content p {
-        font-size: 16px;
-        line-height: 1.6;
-        margin-left: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-    }
-
-    .content img {
-        max-width: 100%;
-        margin-top: 40px;
-        position: relative;
-    }
-
-
-   
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .card-container{
-        justify-content: center;
-    }
-
-    .content p {
-        font-size: 20px;
-        line-height: 1.6;
-        margin-left: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        align-items: center;
-        margin-bottom: 80px;
-    }
-
-    /* Ensure content and images stack correctly */
-    .image,
-    .content {
-        margin: 0;
-        margin-bottom: 20px;
-        height: auto;
-    }
-
-    .content .title {
-        font-size: 20px;
-        margin-bottom: 30px;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .about-content p {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .image img {
-        margin-left: 0;
-        align-items: center;
-    }
-
-    .about-container {
-        margin-left: 0;
-        justify-content: center;
-    }
-    .card-content{
-        text-align: center;
-        }
-        .card-content p{
-            font-size: 24px;
-        }
-  
-}
-
-
-
-  
